@@ -32,7 +32,15 @@ Edit me
 
 
 
-# Week 2 
+# Week 2 - Create Object and Create Function
+
+Objek adalah bagian kecil dari sebuah kelas, sehingga dapat disimpulkan bahwa kelas adalah kumpulan dari beberapa objek yang secara bersama membangun sebuah kelas itu sendiri.
+
+
+## Praktek
+
+
+## Teori
 
 ### Footnote
 [^1]: Every word starts with an uppercase letter 
