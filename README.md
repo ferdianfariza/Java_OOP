@@ -131,7 +131,9 @@ Array sebenarnya adalah objek dari sebuah tipe data.
 jadi kita bisa mengetahui lenght dari sebuah array dengan <array>.lenght
 
 ## Praktek
+Membuat 2 file, Mainquiz.java dan Quiz.java, dimana Mainquiz.java sebagai main yang nantinya akan memanggil Quiz.java yang isinya adalah method seperti getQuestion dan checkAnswer. 
 
+Nanti kita memanggil pertanyaan dengan looping di dalam main
 ## Teori
 
 ### Footnote
