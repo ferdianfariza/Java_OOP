@@ -114,6 +114,26 @@ Objek adalah bagian kecil dari sebuah kelas, sehingga dapat disimpulkan bahwa ke
 
 ## Teori
 
+# Week 3 - Create Object and Create Function
+
+Objek adalah bagian kecil dari sebuah kelas, sehingga dapat disimpulkan bahwa kelas adalah kumpulan dari beberapa objek yang secara bersama membangun sebuah kelas itu sendiri.
+
+## Praktek
+
+## Teori
+
+# Week 4 - Array
+
+Array mampu menyimpan nilai banyak, namun memakai index yang berupa string.
+
+Array sebenarnya adalah objek dari sebuah tipe data.
+
+jadi kita bisa mengetahui lenght dari sebuah array dengan <array>.lenght
+
+## Praktek
+
+## Teori
+
 ### Footnote
 
 [^1]: Every word starts with an uppercase letter
