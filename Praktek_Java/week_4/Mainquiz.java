@@ -14,7 +14,7 @@ public class Mainquiz {
          System.out.println("Pertanyaan ke-" + (i + 1));
          quiz.displayQuestion(i);
          System.out.print("Jawaban Anda : ");
-         int answer = Integer.parseInt(scanner.nextLine());
+         int answer = scanner.nextInt();
          quiz.checkAnswer(i, answer);
       }
 
@@ -24,6 +24,7 @@ public class Mainquiz {
       } else {
          System.out.println("Anda Belum Mendapatkan Nilai Sempurna");
       }
-
+      
+      scanner.close();
    }
 }
