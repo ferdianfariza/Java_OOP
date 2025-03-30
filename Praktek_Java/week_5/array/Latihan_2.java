@@ -21,7 +21,9 @@ public class Latihan_2 {
             array [i][j] = scanner.nextInt();
          }
       }
-
+      
+      
+      System.out.println("----------hasil nilai----------");
       daftarNilai(totalSiswa,totalMatkul, array);
       scanner.close();
    }

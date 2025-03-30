@@ -5,17 +5,17 @@ public class Matrix {
     
     // Method untuk membaca matriks dari input
     // Menggunakan ArrayList<ArrayList<Integer>>
-    public static ArrayList<ArrayList<Integer>> readMatrix(Scanner sc, int rows, int cols, String namaMatriks) {
+    public static ArrayList<ArrayList<Integer>> bacaMatrix(Scanner sc, int baris, int kolom, String namaMatriks) {
         ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
         System.out.println("Masukkan elemen-elemen " + namaMatriks + ":");
-        for (int i = 0; i < rows; i++) {
-            ArrayList<Integer> rowData = new ArrayList<>();
-            for (int j = 0; j < cols; j++) {
+        for (int i = 0; i < baris; i++) {
+            ArrayList<Integer> dataBaris = new ArrayList<>();
+            for (int j = 0; j < kolom; j++) {
                 System.out.print("[" + i + "," + j + "] = ");
                 int val = sc.nextInt();
-                rowData.add(val);
+                dataBaris.add(val);
             }
-            matrix.add(rowData);
+            matrix.add(dataBaris);
         }
         return matrix;
     }
@@ -36,17 +36,17 @@ public class Matrix {
             ArrayList<ArrayList<Integer>> A, 
             ArrayList<ArrayList<Integer>> B) {
         
-        int rows = A.size();
-        int cols = A.get(0).size();
+        int baris = A.size();
+        int kolom = A.get(0).size();
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         
-        for (int i = 0; i < rows; i++) {
-            ArrayList<Integer> rowData = new ArrayList<>();
-            for (int j = 0; j < cols; j++) {
+        for (int i = 0; i < baris; i++) {
+            ArrayList<Integer> dataBaris = new ArrayList<>();
+            for (int j = 0; j < kolom; j++) {
                 int sum = A.get(i).get(j) + B.get(i).get(j);
-                rowData.add(sum);
+                dataBaris.add(sum);
             }
-            result.add(rowData);
+            result.add(dataBaris);
         }
         return result;
     }
@@ -56,17 +56,17 @@ public class Matrix {
             ArrayList<ArrayList<Integer>> A, 
             ArrayList<ArrayList<Integer>> B) {
         
-        int rows = A.size();
-        int cols = A.get(0).size();
+        int baris = A.size();
+        int kolom = A.get(0).size();
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         
-        for (int i = 0; i < rows; i++) {
-            ArrayList<Integer> rowData = new ArrayList<>();
-            for (int j = 0; j < cols; j++) {
+        for (int i = 0; i < baris; i++) {
+            ArrayList<Integer> dataBaris = new ArrayList<>();
+            for (int j = 0; j < kolom; j++) {
                 int diff = A.get(i).get(j) - B.get(i).get(j);
-                rowData.add(diff);
+                dataBaris.add(diff);
             }
-            result.add(rowData);
+            result.add(dataBaris);
         }
         return result;
     }
@@ -77,23 +77,23 @@ public class Matrix {
             ArrayList<ArrayList<Integer>> A, 
             ArrayList<ArrayList<Integer>> B) {
         
-        int rows = A.size();
-        int cols = A.get(0).size();
+        int baris = A.size();
+        int kolom = A.get(0).size();
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         
-        for (int i = 0; i < rows; i++) {
-            ArrayList<Integer> rowData = new ArrayList<>();
-            for (int j = 0; j < cols; j++) {
+        for (int i = 0; i < baris; i++) {
+            ArrayList<Integer> dataBaris = new ArrayList<>();
+            for (int j = 0; j < kolom; j++) {
                 // Pastikan tidak membagi dengan nol
                 if (B.get(i).get(j) == 0) {
                     System.out.println("Peringatan: Terdapat pembagian dengan 0! Hasil akan diset ke 0.");
-                    rowData.add(0);
+                    dataBaris.add(0);
                 } else {
                     int div = A.get(i).get(j) / B.get(i).get(j);
-                    rowData.add(div);
+                    dataBaris.add(div);
                 }
             }
-            result.add(rowData);
+            result.add(dataBaris);
         }
         return result;
     }
@@ -114,15 +114,15 @@ public class Matrix {
         
         // Lakukan perkalian
         for (int i = 0; i < rA; i++) {
-            ArrayList<Integer> rowData = new ArrayList<>();
+            ArrayList<Integer> dataBaris = new ArrayList<>();
             for (int j = 0; j < cB; j++) {
                 int sum = 0;
                 for (int k = 0; k < cA; k++) {
                     sum += A.get(i).get(k) * B.get(k).get(j);
                 }
-                rowData.add(sum);
+                dataBaris.add(sum);
             }
-            result.add(rowData);
+            result.add(dataBaris);
         }
         
         return result;
@@ -130,17 +130,17 @@ public class Matrix {
 
     // Transpose matriks (ukuran r x c menjadi c x r)
     public static ArrayList<ArrayList<Integer>> transposeMatrix(ArrayList<ArrayList<Integer>> A) {
-        int rows = A.size();
-        int cols = A.get(0).size();
+        int baris = A.size();
+        int kolom = A.get(0).size();
         
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         
-        for (int j = 0; j < cols; j++) {
-            ArrayList<Integer> rowData = new ArrayList<>();
-            for (int i = 0; i < rows; i++) {
-                rowData.add(A.get(i).get(j));
+        for (int j = 0; j < kolom; j++) {
+            ArrayList<Integer> dataBaris = new ArrayList<>();
+            for (int i = 0; i < baris; i++) {
+                dataBaris.add(A.get(i).get(j));
             }
-            result.add(rowData);
+            result.add(dataBaris);
         }
         
         return result;
@@ -174,7 +174,7 @@ public class Matrix {
             int rA = sc.nextInt();
             System.out.print("Masukkan jumlah kolom matriks A: ");
             int cA = sc.nextInt();
-            ArrayList<ArrayList<Integer>> A = readMatrix(sc, rA, cA, "Matriks A");
+            ArrayList<ArrayList<Integer>> A = bacaMatrix(sc, rA, cA, "Matriks A");
             
             // Jika hanya transpose, tidak perlu matriks B
             if (pilihan == 5) {
@@ -188,7 +188,7 @@ public class Matrix {
                 int rB = sc.nextInt();
                 System.out.print("Masukkan jumlah kolom matriks B: ");
                 int cB = sc.nextInt();
-                ArrayList<ArrayList<Integer>> B = readMatrix(sc, rB, cB, "Matriks B");
+                ArrayList<ArrayList<Integer>> B = bacaMatrix(sc, rB, cB, "Matriks B");
                 
                 switch (pilihan) {
                     case 1:

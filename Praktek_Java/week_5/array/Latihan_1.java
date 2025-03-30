@@ -1,7 +1,6 @@
 // package praktek_java.week_5.array;
 
 import java.util.Scanner;
-
 public class Latihan_1 {
    public static void main(String[] args){
       Scanner scanner=new Scanner(System.in);
@@ -15,6 +14,7 @@ public class Latihan_1 {
          array[i]= scanner.nextInt();
       }      
       
+      //output
       for (int i=0 ; i<data ; i++) {
          System.out.println("Data ke - "+ (i+1) + ": " + array[i]);
       }      
