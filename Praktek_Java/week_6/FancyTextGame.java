@@ -1,8 +1,7 @@
 package praktek_java.week_6;
 
 class FancyTextGame extends TextGame {
-
-    // Override pengecekan palindrome dengan tampilan animasi sederhana
+    // Override pengecekan palindrome dengan tampilan animasi sederhana, harus menggunakan @Override
     @Override
     public boolean isPalindrome() {
         System.out.print("Memeriksa kata: ");
