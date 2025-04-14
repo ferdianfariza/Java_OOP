@@ -136,9 +136,16 @@ Membuat 2 file, Mainquiz.java dan Quiz.java, dimana Mainquiz.java sebagai main y
 Nanti kita memanggil pertanyaan dengan looping di dalam main.
 ## Teori
 
+
+# Week 5
+--empty
+
+# Week 6 - Inheritence
+inheritence adalah sebuah cara dalam memprogram OOP yang mana akan mewariskan atribut dan method dari satu kelas ke kelas lain, nanitnya kita memiliki superclass dan subclass
+
 ### Footnote
 
-[^1]: Every word starts with an uppercase letter
+[^1]: Every word starts with an uppercase **letter**
 [^2]: Package adalah cara untuk mengelompokkan class dan interface dalam folder yang terstruktur.
 [^3]: Perbedaan Package dan Import
 
