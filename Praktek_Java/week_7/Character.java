@@ -1,4 +1,4 @@
-//package praktek_java.week_7;
+package praktek_java.week_7;
 //inheritance adalah proses pewarisan sifat dari kelas induk ke kelas anak. yaitu dari superclass ke subclass,
 // kelas itu hanya ada atribut dan method
 // inheritance mewariskan method dan atribut dari superclass ke subclass
