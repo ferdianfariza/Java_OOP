@@ -1,4 +1,4 @@
-package week_2;
+package praktek.week_2;
 
 public class Character {
    String nama;
@@ -11,7 +11,6 @@ public class Character {
       this.level = level;
       this.hp = hp;
    }
-
    public void attack() {
       System.out.println(this.nama + " menyerang lawan");
    }

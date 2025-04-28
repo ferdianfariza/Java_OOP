@@ -1,4 +1,4 @@
-package praktek_java.week_7;
+package week_7;
 //inheritance adalah proses pewarisan sifat dari kelas induk ke kelas anak. yaitu dari superclass ke subclass,
 // kelas itu hanya ada atribut dan method
 // inheritance mewariskan method dan atribut dari superclass ke subclass
@@ -12,7 +12,6 @@ public class Character {
 
       public void Character(){
          this.nama= "Steve";
-
       }
       public void Character(String nama, int level, int hp, int exp){ //overloading constructor
          this.nama= nama;
@@ -20,8 +19,6 @@ public class Character {
          this.hp= hp;
          this.exp= exp;
       }
-
-
       public int getHp(){
          return this.hp;
       }
@@ -31,5 +28,17 @@ public class Character {
       public int getLevel(){
          return this.level;
       }
+      public void setLevel(int level) {
+         this.level = level;
+      }
+      public String getNama() {
+         return nama;
+      }
       
    }
+
+   //buff merah biru
+   //pilih senjata
+   //pilih nama
+   //pilih elf/knight/witch (agility/strenght/high damage low def)
+   //

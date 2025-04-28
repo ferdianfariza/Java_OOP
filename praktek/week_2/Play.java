@@ -17,6 +17,5 @@ public class Play {
       if (player1.getExp() == 10) {
          player1.levelUp();
       }
-
    }
 }

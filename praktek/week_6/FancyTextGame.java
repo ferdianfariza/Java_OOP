@@ -1,4 +1,4 @@
-package praktek_java.week_6;
+package week_6;
 
 class FancyTextGame extends TextGame {
     // Override pengecekan palindrome dengan tampilan animasi sederhana, harus menggunakan @Override
