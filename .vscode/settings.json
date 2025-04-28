@@ -1,5 +1,7 @@
 {
    "java.project.sourcePaths": [
-      "Java_OOP"
-   ]
+      "Java_OOP",
+      "."
+   ],
+   "java.project.referencedLibraries": []
 }

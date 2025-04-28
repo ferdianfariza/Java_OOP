@@ -2,7 +2,7 @@
 // membuat package, membuat scope dari file yang kita buat/ class yang kita buat, nanti hubungannya dengan enkapsulasi
 // (pertama kali dijalankan ) harus ada main jika ingin langsung di eksekusi
 // 
-package praktek_java.week_1; //jika kita di ./week_1 maka tidak usah menggunakan package, jika di ./papichulo maka menggunakan package
+package praktek.week_1; //jika kita di ./week_1 maka tidak usah menggunakan package, jika di ./papichulo maka menggunakan package
 
 public class Hello { // class ini public, bisa di akses dimana saja setelah huruf class harus Kapital
     public static void main(String[] args) { // method pertama yang akan dijalankan setiap kali class ini dijalankan
