@@ -1,4 +1,4 @@
-package week_7;
+package praktek.week7;
 
 public class Play {
     public static void main(String[] args) {

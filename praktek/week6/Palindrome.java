@@ -1,4 +1,4 @@
-package praktek_java.week_6;
+package praktek.week6;
 import java.util.Scanner;
 // Kelas Main (program utama)
 public class Palindrome {

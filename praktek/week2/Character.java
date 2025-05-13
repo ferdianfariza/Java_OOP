@@ -1,4 +1,4 @@
-package praktek.week_2;
+package praktek.week2;
 
 public class Character {
    String nama;

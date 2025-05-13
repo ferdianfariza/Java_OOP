@@ -1,4 +1,4 @@
-package week_5;
+package praktek.week_5;
 import java.util.Scanner;
 
 public class Latihan_2 {

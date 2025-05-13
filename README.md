@@ -61,7 +61,7 @@ public class Hello {
 
        class bulldog extends dog{
              public class bark(int num){
-                print("woof")
+                print("wooffff")
            }
        }
 
@@ -142,6 +142,15 @@ Nanti kita memanggil pertanyaan dengan looping di dalam main.
 
 # Week 6 - Inheritence
 inheritence adalah sebuah cara dalam memprogram OOP yang mana akan mewariskan atribut dan method dari satu kelas ke kelas lain, nanitnya kita memiliki superclass dan subclass
+
+
+# Week 8 - Polimorfisme
+mengubah class bentuknya dengan objek yang berbeda,
+
+bkin menu luas 4 bangun datar, dan exit
+dan ketika menu 1 dipencet baru dibuat objek, setelahnya baru input angka berapa, nanti keluar luasnya berapa
+dokumentasi dibuat.
+
 
 ### Footnote
 

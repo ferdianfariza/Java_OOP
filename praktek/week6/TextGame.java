@@ -1,4 +1,4 @@
-package praktek_java.week_6;
+package praktek.week6;
 import java.util.ArrayList;
 
 public class TextGame {
