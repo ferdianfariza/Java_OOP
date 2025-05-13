@@ -9,7 +9,6 @@ public class Main {
       boolean play=true;
       Scanner scan = new Scanner(System.in);
       
-
       while(play){
          System.out.println("\nPilih Bangun Ruang yang Akan Di Hitung");
          System.out.println("1. Persegi");
@@ -30,7 +29,7 @@ public class Main {
             System.out.print("Memilih Persegi, masukan nilai sisi: ");
             sisi = scan.nextInt();
             BangunDatar Persegi = new BangunDatar(sisi);
-            System.out.println(Persegi.luasInteger());
+            System.out.println("Luas " + Persegi.stat + ": "+Persegi.luasInteger());
             break;
             case 2:
             System.out.println("Memilih Persegi Panjang");
@@ -40,17 +39,17 @@ public class Main {
             panjang = scan.nextInt();
 
             BangunDatar PersegiPanjang = new BangunDatar(panjang,lebar);
-            System.out.println(PersegiPanjang.luasInteger());
+            System.out.println("Luas " + PersegiPanjang.stat + ": "+PersegiPanjang.luasInteger());
             break;
             case 3:
             System.out.println("Memilih Segitiga");
-            System.out.print("Masukan nilai lebar: ");
-            alas = scan.nextInt();
-            System.out.print("Masukan nilai panjang: ");
-            tinggi = scan.nextInt();
+            System.out.print("Masukan nilai Alas: ");
+            alas = scan.nextDouble();
+            System.out.print("Masukan nilai Tinggi: ");
+            tinggi = scan.nextDouble();
 
             BangunDatar Segitiga = new BangunDatar(alas,tinggi);
-            System.out.println(Segitiga.luasDouble());
+            System.out.println("Luas " + Segitiga.stat + ": "+ Segitiga.luasDouble());
             break;
             case 4:
             System.out.println("Memilih Lingkaran");
@@ -58,7 +57,7 @@ public class Main {
             radius = scan.nextInt();
 
             BangunDatar Lingkaran = new BangunDatar(radius);
-            System.out.println(Lingkaran.luasDouble());
+            System.out.println("Luas " + Lingkaran.stat + ": "+Lingkaran.luasDouble());
             break;
             case 5:
             play=false;

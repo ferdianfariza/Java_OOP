@@ -6,7 +6,7 @@ public class BangunDatar {
    protected int lebar;
    protected double tinggi;
    protected double alas;
-   protected String stat = "square" ; //defaultnya square
+   protected String stat;
    protected double radius;
    protected final double pi = 3.14;
 
@@ -56,6 +56,9 @@ public class BangunDatar {
           luas= this.sisi*this.sisi;
       }
       else if(this.stat.equals("PersegiPanjang")){
+          luas= this.panjang*this.lebar;
+      }
+      else if(this.stat.equals("Segitiga")){
           luas= this.panjang*this.lebar;
       }
       return luas;

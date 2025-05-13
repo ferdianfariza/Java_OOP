@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"JavaOOP",
+			"."
+		],
+		"java.project.referencedLibraries": []
+	}
+}
