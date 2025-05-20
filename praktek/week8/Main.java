@@ -18,12 +18,14 @@ public class Main {
          System.out.println("5. Keluar");
          System.out.print("Masukkan pilihan: ");
          int pilihan = scan.nextInt();
+         
          int sisi;
          int lebar;
          int panjang;
          double alas;
          double tinggi;
          double radius;
+
          switch (pilihan){
             case 1:
             System.out.print("Memilih Persegi, masukan nilai sisi: ");

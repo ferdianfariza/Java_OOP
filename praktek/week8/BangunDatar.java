@@ -58,9 +58,6 @@ public class BangunDatar {
       else if(this.stat.equals("PersegiPanjang")){
           luas= this.panjang*this.lebar;
       }
-      else if(this.stat.equals("Segitiga")){
-          luas= this.panjang*this.lebar;
-      }
       return luas;
    }
 }
