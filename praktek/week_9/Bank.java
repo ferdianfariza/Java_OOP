@@ -15,27 +15,28 @@ public class Bank {
          int pilihan = input.nextInt();
          
          switch (pilihan){
-            case 1: 
+
+            case 1:
                login();
                break;
-            case 2:
+            case 2: 
                daftar();
                break;
-            case 3:
-               System.out.println("Terima kasih!");
-               return;
-            default:
-               System.out.println("Invalid, pilih 1/2/3");
+            case 3: {
+                System.out.println("Terima kasih!");
+                return;
+              }
+            default : System.out.println("Invalid, pilih 1/2/3");
          }
       }
    }
 
    private void login(){
-      System.out.println("Masukan nomor rekening (123): ");
+      System.out.print("Masukan nomor rekening (123): ");
       int noRek = input.nextInt();
-      input.nextLine(); // Bersihkan newline
+      input.nextLine(); // clear newline
 
-      System.out.println("Masukan password (parallel): ");
+      System.out.print("Masukan password (parallel): ");
       String pass = input.nextLine().trim();
 
       for (Accounts akun : akunList){
@@ -44,13 +45,15 @@ public class Bank {
             System.out.println("Login Berhasil");
             menu();
             return;
+         } else if(akun.getRekening() != noRek && akun.cekPassword(pass)) {
+            System.out.println("Akun tidak ditemukan!");
          }
       }
    }
    private void daftar(){
       System.out.print("Masukan 3 digit angka (ex:123): ");
       int noRek= input.nextInt();
-      input.nextLine(); // Bersihkan newline
+      input.nextLine(); // clear newline
 
        System.out.print("Masukan Password String: ");
       String pass = input.nextLine().trim();
@@ -113,14 +116,37 @@ public class Bank {
          System.out.print("Nominal Tarik : ");
          String nominalInput = input.nextLine();
          int nominal = Integer.parseInt(nominalInput);
+
+         if (!isValidAmount(nominal)) {
+            throw new TarikException("Nominal tidak bisa dicairkan dalam pecahan Rp100.000/Rp50.000/Rp20.000");
+        }
+
          akunAktif.tarik(nominal);
          System.out.println("Berhsail Tarik : "  + nominal + ", Saldo sisa :" + akunAktif.getSaldo());
       }
+      catch (TarikException e) {
+        System.out.println("Gagal Tarik: " + e.getMessage());
+    }
       catch(SaldoKurangException e){
          System.out.println("Saldo tidak mencukupi, kurang " + e.getAmount());
       }
       catch(Exception e){
-         System.out.println("Input invalid" + e.getMessage());
+         System.out.println("Input invalid " + e.getMessage());
       }
+   }
+
+   //tugas
+   public static boolean isValidAmount(int amount) {
+    for (int i = amount / 100_000; i >= 0; i--) {
+      for (int j = (amount - i * 100_000) / 50_000; j >= 0; j--) {
+         int sisa = amount - (i * 100_000 + j * 50_000);
+         if (sisa >= 0 && sisa % 20_000 == 0) {
+               System.out.println("Uang yang ditarik : 100k: " + i + ", 50k: " + j + ", 20k: " + (sisa / 20_000));
+               return true;
+         }
+      }
+   }
+
+    return false;
    }
 }
